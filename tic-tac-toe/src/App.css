@@ -1,0 +1,45 @@
+
+
+
+.colorbox {
+  width: 160px;
+  height: 160px;
+  border: 1px solid black;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+.full-game{
+   display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    align-content: center;
+    width: 480px;
+}
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.restart-button{
+   margin-top: 50px;
+}
+
+.player-x-button,.player-o-button{
+   background-color: green;
+   color: #ffff;
+}
+
+.player-o-button{
+   margin-left: 10px;
+}
+
+a:visited{
+   
+}

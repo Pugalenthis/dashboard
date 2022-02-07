@@ -1,35 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Poppins:wght@400;500&display=swap');
-
-.row{
-  display: flex;
-
-}
-#heading{
-   background-color: green;
-   height: 100px;
-   font-family: 'Comforter', cursive;
-   color: whitesmoke;
-   padding-top: 30px;
-   letter-spacing: 3px;
-   padding-left: 50px;
-   
-}
-
-input{
-      width: 70% !important;
-      height: 35px;  
-}
-
-.button{
+.heading{
+    height: 100px;
     background-color: green;
-    color: whitesmoke;
-    margin-left:10px;
-    width:100px;
-    border-radius: 10px;
-    height: 35px; 
+    color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center !important;
+    width: 100%;
+
 }
 
-.add-task{
-    margin-top: 30px;
-    margin-bottom: 10px;
+.input-group input,.input-group button{
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
+
+.input-group button{
+    color: #ffff;
+    margin-left: 5px;
+}
+
+tr{
+    display: flex !important; 
+    flex-wrap: wrap;
+}
+
+td{
+    font-size: 20px;
+     width: 100%; 
+}
+
+td button{
+      float: right !important;
+      text-align: right !important;
+      color: whitesmoke !important;    
+}
+
