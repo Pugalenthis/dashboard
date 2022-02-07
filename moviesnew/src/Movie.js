@@ -2,10 +2,7 @@ import { useState } from 'react';
 
 export function Movie({ banner, title, rating, summary }) {
 
-  // console.log(banner)
-  // console.log(rating)
-  // console.log(title)
-  // console.log(summary)
+  
   const [like, setlike] = useState(0);
   const [dislike, dellike] = useState(0);
 

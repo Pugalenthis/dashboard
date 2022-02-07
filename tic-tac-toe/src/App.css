@@ -1,34 +1,64 @@
+body{
+   background-color: rgb(20,189,172);
+   background: black;
+}
 
-
-
+.container{
+   display: inline-block;
+}
+.container button{
+    width: 100px;
+}
 .colorbox {
   width: 160px;
   height: 160px;
-  border: 1px solid black;
+  border: 1px solid green;
   font-size: 100px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   cursor: pointer;
+  box-shadow: 2px 2px 2px white,-2px -2px 2px white;
+  
 }
-.full-game{
+.x-o-button{
    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    height: 100vh;
-    align-content: center;
+   justify-content: center;
+   gap:5px;
+   margin-top: 20px;
+  
+}
+#gamebox-row{
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+.full-game{
     width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .board{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center!important;
+  
 }
 
 .restart-button{
-   margin-top: 50px;
+    margin-left: 150px;
+   background-color: green !important;
+}
+.colorbox{
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    align-content: center !important;
+}
+
+.result{
+   color: white !important;
+   margin-top: 30px !important;
 }
 
 .player-x-button,.player-o-button{
@@ -36,10 +66,4 @@
    color: #ffff;
 }
 
-.player-o-button{
-   margin-left: 10px;
-}
 
-a:visited{
-   
-}

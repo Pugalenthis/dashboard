@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Gamebox } from "./Gamebox";
 
 function App() {
   const [board, setboard] = useState([
@@ -50,7 +51,7 @@ function App() {
     if (winner === null && board[index] === null) {
       const boardcopy = [...board];
       boardcopy[index] = isXturn ? "x" : "o";
-    //   boardcopy[index] = isXturn ? "x" : "o";
+      //   boardcopy[index] = isXturn ? "x" : "o";
       // console.log(boardcopy);
       setboard(boardcopy);
       setXturn(!isXturn);
@@ -59,22 +60,18 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <button className="btn  player-x-button" onClick={()=>{
-              setXturn(true)
-        }}>player X</button>
-         href="#"<button className="btn  player-o-button" onClick={()=>{
-              setXturn(false)
-        }}>player O</button>
-        <div className="row" id="gamebox-row">
-          <div class="full-game">
-            <div className="board">
-              {board.map((val, index) => (
-                <Gamebox val={val} onplayerclick={() => handleclick(index)} />
-              ))}
-            </div>
-
-            <div>{winner ? <h2>winner is ;{winner}</h2> : ""}</div>
-            <div>
+        <div class="x-o-button">
+          <button
+            className="btn  player-x-button"
+            onClick={() => {
+              setXturn(true);
+            }}>player X</button>
+          <button
+            className="btn  player-o-button"
+            onClick={() => {
+              setXturn(false);
+            }}>player O</button>
+             <div>
               <button
                 className="btn btn-success restart-button"
                 onClick={() => {
@@ -88,12 +85,20 @@ function App() {
                     null,
                     null,
                     null,
-                  ]);
-                }}
-              >
-                Restart
-              </button>
+                 ]);
+             }}><i className="bi bi-arrow-repeat mr-1"></i>Restart</button>
             </div>
+        </div>
+        <div className="row" id="gamebox-row">
+          <div class="full-game">
+            <div className="board">
+              {board.map((val, index) => (
+                <Gamebox val={val} onplayerclick={() => handleclick(index)} />
+              ))}
+            </div>
+
+            <div className="result">{winner ? <h2>winner is: {winner}🎉💥</h2> : ""}</div>
+           
           </div>
         </div>
       </div>
@@ -102,22 +107,3 @@ function App() {
 }
 
 export default App;
-
-function Gamebox({ val, onplayerclick }) {
-  const styles = {
-    color: val === "x" ? "green" : "red",
-  };
-  // const [val,setval]=useState(null)
-  return (
-    <div>
-      <div style={styles} onClick={() => onplayerclick()} className="colorbox">
-        {val}
-      </div>
-    </div>
-  );
-}
-
-// draw condition
-// tell whose turn
-// player to start x or o
-// restart
