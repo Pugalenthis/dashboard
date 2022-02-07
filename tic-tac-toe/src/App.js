@@ -62,9 +62,9 @@ function App() {
         <button className="btn  player-x-button" onClick={()=>{
               setXturn(true)
         }}>player X</button>
-        <a href="#"><button className="btn  player-o-button" onClick={()=>{
+         href="#"<button className="btn  player-o-button" onClick={()=>{
               setXturn(false)
-        }}>player O</button></a>
+        }}>player O</button>
         <div className="row" id="gamebox-row">
           <div class="full-game">
             <div className="board">
